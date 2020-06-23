@@ -12,3 +12,9 @@ go mod init github.com/cn1995/golangeg
 #[获取一个mod]
 <br>
 go get github.com/cn1995/golangeg
+
+<br>
+[TESTDATA]
+{
+1234567890abcdfeghijkmlnopqrstuvwxyzABCDFEGHIJKMLNOPQRSTUVWXYZ
+}
