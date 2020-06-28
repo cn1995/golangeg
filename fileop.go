@@ -39,3 +39,21 @@ func ReadFile(s string) {
 
 	fmt.Println(s2)
 }
+func WriteFile(f string, s string) {
+	bytes := []byte(s)
+
+	ioutil.WriteFile(f, bytes, 0661)
+}
+
+func WriteFileAppend(f string, s string) {
+	//	bytes := []byte(s)
+
+	file, err := os.OpenFile(f, os.O_APPEND|os.O_RDWR, 0666)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	file.WriteString(s)
+	defer file.Close()
+
+}
